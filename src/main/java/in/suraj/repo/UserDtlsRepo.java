@@ -1,5 +1,10 @@
 package in.suraj.repo;
 
-public interface UserDtlsRepo {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import in.suraj.entity.UserDtlsEntity;
+
+public interface UserDtlsRepo extends JpaRepository<UserDtlsEntity, Integer> {
+	
 
 }

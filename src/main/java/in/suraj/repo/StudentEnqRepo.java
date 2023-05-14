@@ -1,5 +1,9 @@
 package in.suraj.repo;
 
-public interface StudentEnqRepo {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import in.suraj.entity.StudentEnq;
+
+public interface StudentEnqRepo extends JpaRepository<StudentEnq, Integer>{
 
 }
