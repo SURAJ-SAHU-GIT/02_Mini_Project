@@ -31,7 +31,13 @@ public class UserServiceImpl implements UserService {
 	*/
 	@Override
 	public boolean signUp(SignUpForm form) {
-	
+		
+		UserDtlsEntity user = userDtlsRepo.findByEmail(form.getEmail());
+		
+		if(user != null) {
+			return false;
+		}
+		
 		
 		// TODO: Copy data from binding obj to entity obj
 		UserDtlsEntity entity = new UserDtlsEntity();
@@ -59,7 +65,7 @@ public class UserServiceImpl implements UserService {
 		body.append("Temporary pwd : "+ tempPwd);
 		body.append("<br/>");
 		
-		body.append("<a href=\"http://localhost:8080/unlock?email="+to+"\">Click Here To Unlock Your Account</a>");
+		body.append("<a href=\"http://localhost:8080/unlock?email="+ to +"\">Click Here To Unlock Your Account</a>");
 		
 		emailUtils.sendEmail(to, subject, body.toString());
 	

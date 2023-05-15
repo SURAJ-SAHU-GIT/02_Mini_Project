@@ -4,7 +4,7 @@ package in.suraj.binding;
 public class SignUpForm {
 	
 	private String Name;
-	private String Email;
+	private String email;
 	private long Phno;
 	public String getName() {
 		return Name;
@@ -13,10 +13,10 @@ public class SignUpForm {
 		Name = name;
 	}
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
 	public long getPhno() {
 		return Phno;
@@ -24,5 +24,5 @@ public class SignUpForm {
 	public void setPhno(long phno) {
 		Phno = phno;
 	}
-	
+
 }

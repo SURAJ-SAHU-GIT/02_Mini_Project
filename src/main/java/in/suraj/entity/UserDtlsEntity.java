@@ -15,7 +15,7 @@ public class UserDtlsEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer UserId;
 	private String Name;
-	private String Email;
+	private String email;
 	private Long Phno;
 	private String Pwd;
 	private String AccStatus;
@@ -32,10 +32,10 @@ public class UserDtlsEntity {
 		Name = name;
 	}
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
 	public Long getPhno() {
 		return Phno;
@@ -55,5 +55,6 @@ public class UserDtlsEntity {
 	public void setAccStatus(String accStatus) {
 		AccStatus = accStatus;
 	}
+
 	
 }
